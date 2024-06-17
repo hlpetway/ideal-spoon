@@ -14,24 +14,9 @@ import { SalesTable } from "../SalesTable";
 import { Grid } from "@mui/material";
 import { Stack } from "@mui/material";
 import { Chip } from "@mui/material";
+import styles from "../../styles/layout.module.css";
 
-interface SharkProps {
-    styles: {
-        gridContainer: string,
-        paper: string,
-        productDetails: string,
-        productImg: string,
-        productTitle: string,
-        productSubTitle: string,
-        productTags: string,
-        tag: string,
-        sharkSalesChart: string,
-        salesDetails: string
-    };
-}
-
-export const Shark = (props: SharkProps) => {
-    const { styles } = props;
+export const Shark = () => {
     const dispatch = useAppDispatch();
     const productImage = useAppSelector(selectImage);
     const productSubTitle = useAppSelector(selectSubTitle);
@@ -41,7 +26,7 @@ export const Shark = (props: SharkProps) => {
 
     useEffect(() => {
         dispatch(fetchShark());
-    });
+    },[]);
 
     return (
         <Grid className={styles.gridContainer} container spacing={2}>

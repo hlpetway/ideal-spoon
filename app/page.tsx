@@ -1,23 +1,8 @@
 import type { Metadata } from "next";
 import { Shark } from "./components/shark/Shark";
-import styles from "./styles/layout.module.css";
 
 export default function IndexPage() {
-  const updatedStyles = {
-    ...styles,
-    gridContainer: "",
-    paper: "",
-    productDetails: "",
-    productImg: "",
-    productTitle: "",
-    productSubTitle: "",
-    productTags: "",
-    tag: "",
-    sharkSalesChart: "",
-    salesDetails: "",
-  };
-
-  return <Shark styles={updatedStyles} />;
+  return <Shark />;
 }
 
 export const metadata: Metadata = {
