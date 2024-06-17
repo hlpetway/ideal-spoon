@@ -7,8 +7,5 @@ interface Context {
 }
 
 export async function POST(request: NextRequest, context: Context) {
-  // simulate IO latency
-  await new Promise((resolve) => setTimeout(resolve, 500));
-
   return NextResponse.json({ data: data });
 }
