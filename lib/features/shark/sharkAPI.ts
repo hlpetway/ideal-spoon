@@ -1,6 +1,5 @@
 // A mock function to mimic making an async request for data
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import data from "../../../app/api/shark/data.json"
 export interface SharkResponse {
     data: {
         id: string,
